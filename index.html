@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/favicon.png">
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <marquee style="margin-bottom: 20px; color: rgb(15, 27, 194); font-weight:700 ; font-size: 30px;" behavior=""
+            direction="">
+            VAZIFANI TO'LIQ BAJARIB KEYIN YUBORING !
+        </marquee>
+        <form id="telegramForm" onsubmit="return sendtelegram()">
+            <input style="margin-bottom: 30px;" type="text" id="name" placeholder="Ismingizni kiriting" required>
+            <input style="margin-bottom: 30px;" type="text" id="email" placeholder="Vazifa nomini kiriting" required>
+
+            <div class="file-input-container">
+                <button class="btn" type="button" onclick="document.getElementById('fileInput').click()">
+                    <img src="./images/attachment-512.webp" alt="">
+                </button>
+                <input type="text" id="message" placeholder="Fayl nomi bu yerda ko'rinadi" readonly required>
+                <input type="file" id="fileInput" accept=".zip,.rar" onchange="handleFileSelect()" hidden>
+            </div>
+
+            <button type="submit">Yuborish</button>
+        </form>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
