@@ -1,39 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework</title>
+    <title>Homework | Sazu academy</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./images/favicon.png">
+    <link rel="icon" href="./images/sazu.png">
 </head>
 
 <body>
 
-    <div class="form-container">
 
-        <marquee style="margin-bottom: 20px; color: rgb(208, 211, 255); font-weight:700 ; font-size: 30px;" behavior=""
-            direction="">
-            YOU ARE A STRONG PROGRAMMER </marquee>
-        </marquee>
-        <form id="telegramForm" onsubmit="return sendtelegram()">
-            <input style="margin-bottom: 30px;" type="text" id="name" placeholder="Ismingizni kiriting" required>
-            <input style="margin-bottom: 30px;" type="text" id="email" placeholder="Vazifa nomini kiriting" required>
+    <button id="openModal">Send Homework</button>
 
-            <div class="file-input-container">
-                <button class="btn" type="button" onclick="document.getElementById('fileInput').click()">
-                    <img src="./images/attachment-512.webp" alt="">
-                </button>
-                <input type="text" id="message" placeholder="Fayl nomi bu yerda ko'rinadi" readonly required>
-                <input type="file" id="fileInput" accept=".zip,.rar" onchange="handleFileSelect()" hidden>
-            </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ma'lumotlarni kiriting</h2>
 
-            <button type="submit">Yuborish</button>
-        </form>
+            <label>Fullname:</label>
+            <input type="text" id="fullname" placeholder="Ism Familiya">
+
+            <label>Name of Homework:</label>
+            <input type="text" id="homeworkName" placeholder="Uy vazifasi nomi">
+
+            <label>Choose Your Group:</label>
+            <select id="group">
+                <option value="N10">N 10</option>
+                <option value="N12">N 12</option>
+                <option value="N13">N 13</option>
+            </select>
+
+            <label>Zip fayl yuklash:</label>
+            <input type="file" id="zipFile" accept=".zip">
+
+            <label>Versal yoki Netlify link:</label>
+            <input type="url" id="versalLink" placeholder="Versal linkini kiriting">
+
+            <button id="sendData">Yuborish</button>
+
+        </div>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="./js/main.js"></script>
 </body>
