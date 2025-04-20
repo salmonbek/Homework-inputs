@@ -4,8 +4,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp");
-  background-repeat: repeat;
+  background-image: url("https://img.freepik.com/free-vector/blue-curve-background_53876-113112.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 button {
@@ -16,6 +18,42 @@ button {
 
 #openModal {
   width: 300px;
+}
+#openModal {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.arrow-down {
+  position: absolute;
+  top: -15px; /* Tugmaning tepasida joylashadi */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #4caf50; /* Tugma bilan bir xil rangda */
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(5px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .modal {
